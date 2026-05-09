@@ -161,9 +161,10 @@ window.addEventListener('resize', function() {
 // 
 document.addEventListener('DOMContentLoaded', function() {
   const participantsSwiper = new Swiper('.participants__slider', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
+    centeredSlides: false,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -173,17 +174,15 @@ document.addEventListener('DOMContentLoaded', function() {
       prevEl: '.participants__nav-prev',
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 16,
-      },
-      768: {
+      481: {
         slidesPerView: 2,
         spaceBetween: 20,
+        centeredSlides: false,
       },
-      1024: {
+      1025: {
         slidesPerView: 3,
         spaceBetween: 20,
+        centeredSlides: false,
       }
     }
   });
@@ -195,11 +194,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     totalSpans.forEach(span => span.textContent = totalSlides);
     
-  
     let currentIndex = participantsSwiper.realIndex + 1;
     currentSpans.forEach(span => span.textContent = currentIndex);
     
-
     participantsSwiper.on('slideChange', function() {
       let currentIndex = participantsSwiper.realIndex + 1;
       currentSpans.forEach(span => span.textContent = currentIndex);
