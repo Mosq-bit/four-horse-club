@@ -3,10 +3,9 @@
   background-color: var(--white);
 }
 
-
 .participants__header {
   display: flex;
-  justify-content: space-between;
+ justify-content: space-between;
   align-items: center;
   margin-bottom: 48px;
 }
@@ -18,13 +17,11 @@
   text-transform: uppercase;
 }
 
-
 .participants__controls {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-
 
 .participants__controls--mobile {
   display: none;
@@ -80,13 +77,13 @@
   cursor: not-allowed;
 }
 
-/* Карточка участника */
+
 .participants__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 37px 0 37px;
+  padding: 0 37px;
   border-radius: 16px;
   transition: all 0.3s;
 }
@@ -119,7 +116,7 @@
   color: var(--grey);
   opacity: 0.6;
   margin-bottom: 20px;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .participants__link {
@@ -138,48 +135,34 @@
   color: var(--white);
 }
 
-/* Swiper слайдер */
+
 .participants__slider {
   overflow: hidden;
   padding: 10px 0;
 }
 
-.participants__wrapper {
-  display: flex;
-  gap: 20px;
+.participants__slider .swiper-slide {
+  height: auto;
 }
 
-.participants__slide {
-  width: calc(33.33% - 14px);
-  flex-shrink: 0;
-}
-
-
-
-
+/* Мобильные устройства до 375px */
 @media (max-width: 375px) {
-  .participants {
-    padding: 32px 0;
-  }
-  .participants__controls--desktop{
+  .participants__controls--desktop {
     display: none;
   }
-  .participants__controls--mobile{
+  .participants__controls--mobile {
     display: flex;
     justify-content: center;
   }
 
-  .participants__header{
+  .participants__header {
     margin-bottom: 40px;
   }
 
   .participants__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     padding: 0 46px;
   }
+  
   .participants__title {
     font-size: 36px;
   }
@@ -194,7 +177,6 @@
   }
 
   .participants__rank {
-
     font-size: 20px;
   }
 
@@ -218,6 +200,7 @@
   }
 }
 
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .participants {
     padding-bottom: 100px;
@@ -225,10 +208,6 @@
 
   .participants__title {
     font-size: 42px;
-  }
-
-  .participants__slide {
-    width: calc(50% - 10px);
   }
 
   .participants__avatar {
@@ -263,6 +242,7 @@
   }
 }
 
+
 @media (min-width: 481px) and (max-width: 767px) {
   .participants {
     padding-bottom: 80px;
@@ -287,10 +267,6 @@
     display: flex !important;
     justify-content: center;
     margin-top: 32px;
-    width: 100%;
-  }
-
-  .participants__slide {
     width: 100%;
   }
 
@@ -328,7 +304,6 @@
     font-size: 16px;
   }
 }
-
 @media (min-width: 376px) and (max-width: 480px) {
   .participants {
     padding-bottom: 60px;
@@ -356,8 +331,16 @@
     width: 100%;
   }
 
-  .participants__slide {
-    width: 100%;
+
+  .participants__slider .swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .participants__card {
+    width: 335px;
+    padding: 0 20px;
+    margin: 0 auto;
   }
 
   .participants__avatar {
@@ -382,10 +365,6 @@
     font-size: 14px;
   }
 
-  .participants__card {
-    padding: 0 25px;
-  }
-
   .participants__controls--mobile .participants__nav-prev,
   .participants__controls--mobile .participants__nav-next {
     width: 34px;
@@ -403,8 +382,15 @@
   }
 }
 
+
+@media (min-width: 1025px) {
+  .participants__slider .swiper-slide {
+    width: calc(33.333% - 14px) !important;
+  }
+}
+
+
 @media (min-width: 1280px) and (max-width: 1440px) {
- 
   .participants__card {
     padding: 0 30px;
   }
@@ -462,7 +448,6 @@
   }
 }
 
-
 @media (min-width: 1920px) {
   .participants {
     padding-bottom: 200px;
@@ -471,7 +456,6 @@
   .participants__title {
     font-size: 72px;
   }
-
 
   .participants__name {
     font-size: 32px;
@@ -497,9 +481,10 @@
   }
 }
 
+
 @media (max-width: 767px) and (orientation: landscape) {
   .participants__avatar {
-    width:244px;
+    width: 244px;
     height: 244px;
   }
 
@@ -526,7 +511,7 @@
   }
 }
 
-/* ========== АДАПТИВ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ (до 320px) ========== */
+
 @media (max-width: 320px) {
   .participants__title {
     font-size: 28px;
