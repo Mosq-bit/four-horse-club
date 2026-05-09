@@ -1,6 +1,7 @@
 .header__section {
   padding-bottom: 132px;
-  background-image: url(/img/new.png);
+  background-image: url(/four-horse-club
+/img/new.png);
   background-size: cover;
 }
 
@@ -83,7 +84,8 @@
 
 @media (max-width: 375px) {
   .header__section {
-    background-image: url(/img/mob__screen.png);
+    background-image: url(/four-horse-club
+/img/mob__screen.png);
     padding: 0 0 291px;
   }
 
