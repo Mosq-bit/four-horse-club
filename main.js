@@ -5,7 +5,8 @@ function initStagesSlider() {
   const originalCards = document.querySelectorAll('.stage__card');
   if (originalCards.length === 0) return;
   
-  const isMobile = window.innerWidth <= 425;
+  // ИЗМЕНЕНО: 425 -> 428
+  const isMobile = window.innerWidth <= 428;
   const isAlreadyBuilt = cardsContainer.classList.contains('slider-built');
   
   if (isMobile && !isAlreadyBuilt) {
@@ -158,7 +159,8 @@ window.addEventListener('resize', function() {
   resizeTimer = setTimeout(initStagesSlider, 250);
 });
 
-// 
+//
+
 document.addEventListener('DOMContentLoaded', function() {
   const participantsSwiper = new Swiper('.participants__slider', {
     slidesPerView: 1,
@@ -187,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Обновление счетчиков
   const updateCounters = () => {
     const currentSpans = document.querySelectorAll('.participants__current');
     const totalSpans = document.querySelectorAll('.participants__total');
@@ -205,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   updateCounters();
   
- 
+  // Остановка автопрокрутки при наведении
   const slider = document.querySelector('.participants__slider');
   if (slider) {
     slider.addEventListener('mouseenter', () => {
