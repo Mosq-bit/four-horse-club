@@ -183,7 +183,7 @@
 
 
   .stage__slide--merged {
-    background-image: url(/img/stage__bg.png);
+    background-image: url(/four-horse-club/img/stage__bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     gap: 0;
@@ -207,7 +207,7 @@
   }
  
   .stage__slide--single .stage__card {
-    background-image: url(/img/stage__bg.png);
+    background-image: url(/four-horse-club/img/stage__bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
