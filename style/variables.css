@@ -1,0 +1,20 @@
+
+
+
+
+
+:root {
+    --white:#ffff;
+    --grey:#313131;
+    --red:#f54932;
+    --blue:#3057a2;
+    --black:#1f1f1f;
+    --yellow: #fbce51;
+    --light-grey:#d0d0d0;
+
+
+
+  --font-family: "Golos Text", sans-serif;
+  --second-family: "Merriweather", sans-serif;
+  --third-family: "Montserrat", sans-serif;
+}
