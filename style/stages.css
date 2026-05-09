@@ -117,7 +117,7 @@
   margin: 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .stages{
     padding-bottom: 118px;
   }
@@ -303,7 +303,7 @@
     height: 16px;
   }
 }
-@media (min-width: 376px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .stages {
     padding-bottom: 100px;
   }
@@ -566,7 +566,7 @@
 }
 
 
-@media (min-width: 376px) {
+@media (min-width: 426px) {
   .stages__slider-controls,
   .stages__nav-prev,
   .stages__nav-next,
@@ -586,7 +586,7 @@
 }
 
 
-@media (min-width: 376px) and (max-width: 768px) and (orientation: landscape) {
+@media (min-width: 426px) and (max-width: 768px) and (orientation: landscape) {
   .stage__cards {
     grid-template-columns: repeat(3, 1fr);
   }
