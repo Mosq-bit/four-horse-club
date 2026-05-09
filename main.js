@@ -5,7 +5,6 @@ function initStagesSlider() {
   const originalCards = document.querySelectorAll('.stage__card');
   if (originalCards.length === 0) return;
   
-  // ИЗМЕНЕНО: 425 -> 428
   const isMobile = window.innerWidth <= 428;
   const isAlreadyBuilt = cardsContainer.classList.contains('slider-built');
   
@@ -189,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Обновление счетчиков
+  
   const updateCounters = () => {
     const currentSpans = document.querySelectorAll('.participants__current');
     const totalSpans = document.querySelectorAll('.participants__total');
@@ -208,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   updateCounters();
   
-  // Остановка автопрокрутки при наведении
+
   const slider = document.querySelector('.participants__slider');
   if (slider) {
     slider.addEventListener('mouseenter', () => {
