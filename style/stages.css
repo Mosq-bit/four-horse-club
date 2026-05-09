@@ -41,8 +41,7 @@
 .stage__cards::before {
   position: absolute;
   content: "";
-  background-image: url(/four-horse-club
-/img/airplane.png);
+  background-image: url(/four-horse-club/img/airplane.png);
   background-repeat: no-repeat;
   top: 43%;
   left: 64%;
@@ -55,8 +54,7 @@
   display: flex;
   gap: 20px;
   padding: 20px;
-  background-image: url(/four-horse-club
-/img/stage__bg.png);
+  background-image: url(/four-horse-club/img/stage__bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
