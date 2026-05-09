@@ -22,7 +22,7 @@
   }
 }
 .stage__text-row {
-  max-width: 558px;
+  max-width: 570px;
 
   display: grid;
   grid-template-columns: 270px 1fr;
