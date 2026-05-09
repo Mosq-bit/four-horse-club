@@ -1,4 +1,3 @@
-// JavaScript для создания слайдов с правильными классами
 function initStagesSlider() {
   const cardsContainer = document.querySelector('.stage__cards');
   if (!cardsContainer) return;
@@ -6,11 +5,11 @@ function initStagesSlider() {
   const originalCards = document.querySelectorAll('.stage__card');
   if (originalCards.length === 0) return;
   
-  const isMobile = window.innerWidth <= 375;
+  const isMobile = window.innerWidth <= 425;
   const isAlreadyBuilt = cardsContainer.classList.contains('slider-built');
   
   if (isMobile && !isAlreadyBuilt) {
-    // Сохраняем оригинальное содержимое
+ 
     if (!cardsContainer.dataset.originalHtml) {
       cardsContainer.dataset.originalHtml = cardsContainer.innerHTML;
     }
@@ -18,44 +17,44 @@ function initStagesSlider() {
     cardsContainer.innerHTML = '';
     cardsContainer.classList.add('slider-built');
     
-    // Создаем слайды
-    // Слайд 1: карточки 1 и 2 вместе (один фон)
+
+ 
     const slide1 = document.createElement('div');
     slide1.className = 'stage__slide stage__slide--merged';
     slide1.appendChild(originalCards[0].cloneNode(true));
     slide1.appendChild(originalCards[1].cloneNode(true));
     cardsContainer.appendChild(slide1);
     
-    // Слайд 2: карточка 3 (отдельный фон)
+ 
     const slide2 = document.createElement('div');
     slide2.className = 'stage__slide stage__slide--single';
     slide2.appendChild(originalCards[2].cloneNode(true));
     cardsContainer.appendChild(slide2);
     
-    // Слайд 3: карточки 4 и 5 вместе (один фон)
+
     const slide3 = document.createElement('div');
     slide3.className = 'stage__slide stage__slide--merged';
     slide3.appendChild(originalCards[3].cloneNode(true));
     slide3.appendChild(originalCards[4].cloneNode(true));
     cardsContainer.appendChild(slide3);
     
-    // Слайд 4: карточка 6 (отдельный фон)
+
     const slide4 = document.createElement('div');
     slide4.className = 'stage__slide stage__slide--single';
     slide4.appendChild(originalCards[5].cloneNode(true));
     cardsContainer.appendChild(slide4);
     
-    // Слайд 5: карточка 7 (отдельный фон)
+
     const slide5 = document.createElement('div');
     slide5.className = 'stage__slide stage__slide--single';
     slide5.appendChild(originalCards[6].cloneNode(true));
     cardsContainer.appendChild(slide5);
     
-    // Добавляем контролы
+
     addSliderControls(cardsContainer, 5);
     
   } else if (!isMobile && isAlreadyBuilt) {
-    // Восстанавливаем оригинальную версию
+
     if (cardsContainer.dataset.originalHtml) {
       cardsContainer.innerHTML = cardsContainer.dataset.originalHtml;
       cardsContainer.classList.remove('slider-built');
@@ -185,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Обновление обоих счетчиков
+ 
   const updateCounters = () => {
     const currentSpans = document.querySelectorAll('.participants__current');
     const totalSpans = document.querySelectorAll('.participants__total');
