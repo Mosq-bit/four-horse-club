@@ -164,6 +164,10 @@ document.addEventListener('DOMContentLoaded', function() {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: '.participants__nav-next',
       prevEl: '.participants__nav-prev',
@@ -184,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
- 
   const updateCounters = () => {
     const currentSpans = document.querySelectorAll('.participants__current');
     const totalSpans = document.querySelectorAll('.participants__total');
@@ -192,6 +195,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     totalSpans.forEach(span => span.textContent = totalSlides);
     
+  
+    let currentIndex = participantsSwiper.realIndex + 1;
+    currentSpans.forEach(span => span.textContent = currentIndex);
+    
+
     participantsSwiper.on('slideChange', function() {
       let currentIndex = participantsSwiper.realIndex + 1;
       currentSpans.forEach(span => span.textContent = currentIndex);
@@ -199,4 +207,15 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   
   updateCounters();
+  
+ 
+  const slider = document.querySelector('.participants__slider');
+  if (slider) {
+    slider.addEventListener('mouseenter', () => {
+      participantsSwiper.autoplay.stop();
+    });
+    slider.addEventListener('mouseleave', () => {
+      participantsSwiper.autoplay.start();
+    });
+  }
 });
